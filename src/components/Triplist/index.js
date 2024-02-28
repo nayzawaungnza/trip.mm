@@ -4,7 +4,7 @@ import './index.css'
 
 export default function Triplist() {
     let [url, setUrl] = useState('http://localhost:3001/trips');
-    let {data : trips, loading, error} = useFetch(url)
+    let {data : trips, loading, error} = useFetch(url, {type:"GET"})
         
     
 
