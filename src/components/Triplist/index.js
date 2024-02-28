@@ -3,7 +3,7 @@ import useFetch from '../../hooks/useFetch';
 import './index.css'
 
 export default function Triplist() {
-    let [url, setUrl] = useState('http://localhost:3001/tripsff');
+    let [url, setUrl] = useState('http://localhost:3001/trips');
     let {data : trips, loading, error} = useFetch(url)
         
     
