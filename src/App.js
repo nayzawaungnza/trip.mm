@@ -7,9 +7,15 @@ function App() {
 
   let [show, setShow] = useState(true);
 
+  let [data, setData] = useState('my data');
+  let myFunction = () =>{
+    setData('update data');//render -> stop
+  }
   useEffect(()=>{
-    console.log('using render');
-  },[])
+    myFunction()
+    console.log('runing render');
+    
+  },[myFunction])
 
   return (
     <>
@@ -22,3 +28,9 @@ function App() {
 }
 
 export default App;
+
+// data - my data
+//data - 'update data' -> render
+
+//setter function is not alway infinite loop. (when set data  is same data)
+
